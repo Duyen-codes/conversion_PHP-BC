@@ -53,9 +53,9 @@ if (isset($_GET['temp']) || isset($_GET['target_unit'])) {
         $fahrenheit = ($temp * 9/5) + 32;
         echo $fahrenheit . "F";
     }
-  if($target_unit == "K") {
-      $kelvin = ($temp + 273.15);
-      echo $kelvin . "K";
+    if($target_unit == "K") {
+        $kelvin = ($temp + 273.15);
+        echo $kelvin . "K";
   } 
 } 
 
@@ -67,9 +67,9 @@ if (isset($_GET['speed']) || isset($_GET['speedUnit'])) {
         $ms = round(($speed / 3.6), 2);
         echo $ms . " m/s";
     }
-  if($target_unit == "knot") {
-      $knot  = round(($speed / 1.852),2);
-      echo $knot . " knot";
+    if ($target_unit == "knot") {
+        $knot  = round(($speed / 1.852),2);
+        echo $knot . " knot";
   } 
 } 
 
@@ -79,12 +79,12 @@ if (isset($_GET['mass']) || isset($_GET['massUnit'])) {
     $massUnit = $_GET["massUnit"] ?? '';
 
     if ($massUnit == "kg") {
-       echo  ($mass * 1000 !== 1) ?  $mass * 1000 . " Grams" :  $mass * 1000 . " Gram";
+        echo ($mass * 1000 !== 1) ?  $mass * 1000 . " Grams" :  $mass * 1000 . " Gram";
     }
 
-  if($massUnit== "g") {
-    echo  ($mass / 1000 !== 1) ?  $mass / 1000 . " Kilograms" :  $mass / 1000 . " Kilogram";
-  } 
+    if ($massUnit== "g") {
+        echo ($mass / 1000 !== 1) ?  $mass / 1000 . " Kilograms" :  $mass / 1000 . " Kilogram";
+    } 
 } 
 
 // Test comment
